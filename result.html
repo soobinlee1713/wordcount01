@@ -1,0 +1,73 @@
+<head>
+        <style>
+            body {
+                background-color:hsl(0, 100%, 90%);
+            }
+            .center {
+                text-align: center;
+                margin-top: 70px;
+                font-family: 'LotteMartHappy';
+            }
+            .button {
+                border: 1px;
+                border-style: solid;
+                color: black;
+                border-color: black;
+                padding: 15px 32px;
+                text-align: center;
+                text-decoration: none;
+                display: inline-block;
+                font-size: 16px;
+                font-family: 'LotteMartHappy';
+            }
+            .himdel{
+            text-align: center;
+            font-size: 30px;
+            font-family: 'S-CoreDream-3Light';
+            }
+            .full {
+            display: inline-block;
+            text-align: center;
+            width: 30%;
+            height: 500px;
+            padding: 0.1px;
+            position: absolute;
+            top: 25%;
+            left: 35%;
+            font-family: 'S-CoreDream-3Light';
+            background-color: white;
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.30);
+
+}
+            @font-face { font-family: 'LotteMartHappy'; 
+            font-style: normal; 
+            font-weight: 400; 
+            src: url('//cdn.jsdelivr.net/korean-webfonts/1/corps/lottemart/LotteMartHappy/LotteMartHappyMedium.woff2') format('woff2'), url('//cdn.jsdelivr.net/korean-webfonts/1/corps/lottemart/LotteMartHappy/LotteMartHappyMedium.woff') 
+            format('woff'); }
+            @font-face { font-family: 'S-CoreDream-3Light'; 
+            src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/S-CoreDream-3Light.woff') format('woff'); 
+            font-weight: normal; 
+            font-style: normal; }
+    
+            </style>
+            </head>
+            <body>
+                    <div class="center">
+                            <h1 style="font-size:40px">당신이 입력한 텍스트는 "{{total}}"개로 구성되어있습니다.</h1>
+                            <a style ="font-size: 20px" href = "{%url 'index'%}">다시 하기 </a>
+                            </div>
+
+                    <div class = "full">
+                            <h2> 입력한 텍스트: </h2>
+                            {{full}}
+                            
+                            <h2>단어 카운트:</h2>
+                            {% for word,howmany in dictionary%}
+                            {{word}} : {{howmany}}
+                            <br>
+                            {%endfor%}
+                            </div>
+
+                            </body>
+
+
